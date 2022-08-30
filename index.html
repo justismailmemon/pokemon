@@ -1,0 +1,337 @@
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<div id="app">
+  <div class="">
+    <div class="">
+      <h1 class="pl-14 pt-20 font-bold text-2xl">
+        Pokedex
+      </h1>
+      <div class="mt-4 md:flex md:flex-wrap md:justify-center">
+        <div v-for="(row, key) in list" :key="key" @click="jabClickHo(row, key)" class="bg-green-300 w-40 pb-4 rounded-lg m-2 cursor-pointer">
+          <div class=" flex items-center justify-center h-32 w-full">
+            <img src="./1.png" alt="" class="">
+          </div>
+          
+          <h1 class="text-white font-bold text-center">
+            {{ row.name }}
+          </h1>
+          <div class="flex justify-center mt-4">
+            <span class="bg-green-200 mx-1 px-2 rounded-2xl ">
+              {{ row.tagOne }}
+            </span>
+            <span class="bg-green-200 mx-1 px-2 rounded-2xl">
+              {{ row.tagTwo }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div v-if="agarSlideOver" class=" bg-green-400 h-screen overflow-y-scroll shadow-sm right-0 top-0 bottom-0 left-[55%] fixed">
+    <div class="px-6">
+      <div class="flex justify-between">
+        <h1 class="font-bold text-white text-4xl pt-10">
+          {{ name }}
+        </h1>
+        <h2 class="pt-14 text-white text-3xl">
+          {{ key }}
+        </h2>
+      </div>
+
+
+      <div class="flex justify mt-4 cursor-pointer">
+        <span class="bg-green-200 mx-1 px-2 rounded-2xl font-bold">
+          {{ tagOne }}
+        </span>
+        <span class="bg-green-200 mx-1 px-2 rounded-2xl text-2x1 font-bold">
+          {{ tagTwo }}
+        </span>
+      </div>
+      <div>
+        <div class="flex justify-center w-full h-56 items-center">
+          <img src="./1.png" class="w-full" alt="">
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="bg-white h-full rounded-tl-3xl rounded-tr-3xl px-6 py-16">
+      <div class="py-2">
+        <span class="text-gray-400 pr-14 font-bold">Experience</span> <span class="font-semibold">
+          {{ experience }}</span>
+      </div>
+      <div class="py-2">
+        <span class="text-gray-400 pr-14 font-bold">Height</span> <span class="font-semibold">
+          {{ height }}</span>
+      </div>
+      <div class="py-2">
+        <span class="text-gray-400 pr-14 font-bold">Weight</span> <span class="font-semibold">
+          {{ weight }}</span>
+      </div>
+      <div class="py-2">
+        <span class="text-gray-400 pr-14 font-bold">Abilities</span> <span class="font-semibold">
+          {{ abilities }}</span>
+      </div>
+    </div>
+
+    <div>
+    </div>
+
+  </div>
+
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          "key": "0",
+          "name": "bulbasaur",
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision",
+          "agarSlideOver": false,
+          list: [
+            {
+              "name": "bulbasaur",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass1",
+              "tagTwo": "Poision1"
+            },
+            {
+              "name": "ibrahim",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "10ss0 KG",
+              "abilities": "overgrow ssss",
+              "tagOne": "grass2",
+              "tagTwo": "Poision2"
+            },
+            {
+              "name": "ismail",
+              
+              "experience": "26s3 EX",
+              "height": "2s0M",
+              "weight": "100 KG",
+              "abilities": "overgrow chssslorophyll",
+              "tagOne": "grass3",
+              "tagTwo": "Poision3"
+            },
+            {
+              "name": "venusaur",
+              
+              "experience": "26s3 EX",
+              "height": "2ss0M",
+              "weight": "100ss KG",
+              "abilities": "overgrssow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "charmander",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "charmeleon",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "charizard",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "squirtle",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "wartortle",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "blastoise",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "caterpie",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "metapod",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "butterfree",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "weedle",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "kakuna",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "beedrill",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "pidgey",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "pidgeotto",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "pidgeot",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "rattata",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            },
+            {
+              "name": "raticate",
+              
+              "experience": "263 EX",
+              "height": "20M",
+              "weight": "100 KG",
+              "abilities": "overgrow chlorophyll",
+              "tagOne": "grass",
+              "tagTwo": "Poision"
+            }
+          ]
+        }
+      },
+      methods: {
+        jabClickHo(row, key) {
+          console.log(row.name)
+          console.log(row.tagOne)
+          console.log(row.tagTwo)
+          console.log(key)
+        
+          this.name = row.name
+          this.tagOne = row.tagOne
+          this.tagTwo = row.tagTwo
+          this.experience = row.experience
+          this.height = row.height
+          this.weight = row.weight
+          this.abilities = row.abilities
+          this.key = key
+
+
+          this.agarSlideOver = true
+        }
+      }
+    }).mount('#app')
+  </script>
